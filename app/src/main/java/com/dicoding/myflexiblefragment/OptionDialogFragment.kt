@@ -64,6 +64,10 @@ class OptionDialogFragment : DialogFragment() {
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
+
+        /*
+        Saat attach maka set optionDialogListener dengan listener dari detailCategoryFragment
+         */
         val fragment = parentFragment
 
         if (fragment is DetailCategoryFragment) {
@@ -73,6 +77,10 @@ class OptionDialogFragment : DialogFragment() {
 
     override fun onDetach() {
         super.onDetach()
+
+        /*
+        Saat detach maka set null pada optionDialogListener
+         */
         this.optionDialogListener = null
     }
 

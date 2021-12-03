@@ -66,6 +66,18 @@ class DetailCategoryFragment : Fragment(){
         }
     }
 
+    /*
+    Gunakan method ini jika kita ingin menjaga data agar tetap aman ketika terjadi config changes (portrait - landscape)
+     */
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+
+        outState.putString(EXTRA_DESCRIPTION, description)
+    }
+
+    /*
+    Kode yang akan dijalankan ketika option dialog dipilih ok
+    */
     internal var optionDialogListener: OptionDialogFragment.OnOptionDialogListener = object: OptionDialogFragment.OnOptionDialogListener {
         override fun onOptionChosen(text: String?) {
             Toast.makeText(activity, text, Toast.LENGTH_SHORT).show()

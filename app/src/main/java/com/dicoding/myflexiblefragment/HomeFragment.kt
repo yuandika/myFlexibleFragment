@@ -7,12 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 
-
-/**
- * A simple [Fragment] subclass.
- * Use the [HomeFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class HomeFragment : Fragment(), View.OnClickListener {
 
     override fun onCreateView(
@@ -31,6 +25,12 @@ class HomeFragment : Fragment(), View.OnClickListener {
 
     override fun onClick(v: View?) {
         if (v?.id == R.id.btn_category) {
+            /*
+            Method addToBackStack akan menambahkan fragment ke backstack
+            Behaviour dari back button :
+            jika ada fragment di dalam backstack maka fragment yang akan di close / remove
+            jika sudah tidak ada fragment di dalam backstack maka activity yang akan di close / finish
+             */
             val mCategoryFragment = CategoryFragment()
             val mFragmentManager = parentFragmentManager
             mFragmentManager.beginTransaction().apply {

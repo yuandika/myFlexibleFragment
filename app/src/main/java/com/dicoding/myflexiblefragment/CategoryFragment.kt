@@ -41,6 +41,12 @@ class CategoryFragment : Fragment(), View.OnClickListener {
             mDetailCategoryFragment.arguments = mBundle
             mDetailCategoryFragment.description = description
 
+            /*
+            Method addToBackStack akan menambahkan fragment ke backstack
+            Behaviour dari back button akan cek fragment dari backstack,
+            jika ada fragment di dalam backstack maka fragment yang akan di close / remove
+            jika sudah tidak ada fragment di dalam backstack maka activity yang akan di close / finish
+             */
             val mFragmentManager = parentFragmentManager
             mFragmentManager?.beginTransaction()?.apply {
                 replace(R.id.frame_container, mDetailCategoryFragment, DetailCategoryFragment::class.java.simpleName)
