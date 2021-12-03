@@ -18,4 +18,7 @@
     <string name="david_moyes">David Moyes</string>
     <string name="choose">Pilih</string>
     <string name="close">Tutup</string>
+    <string name="this_home">ini fragment Home</string>
+    <string name="this_fragment_option_dialog">Ini fragment Option Dialog</string>
+    <string name="this_fragment_detail_category">ini fragment Detail Category</string>
 </resources>

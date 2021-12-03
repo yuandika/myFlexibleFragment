@@ -6,6 +6,12 @@
     android:orientation="vertical"
     tools:context=".OptionDialogFragment">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="@string/this_fragment_option_dialog" />
+
      <TextView
          android:layout_width="match_parent"
          android:layout_height="wrap_content"
